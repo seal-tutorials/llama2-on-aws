@@ -1,4 +1,6 @@
-output "endpoint_service_url" {
+output "endpoints" {
   description = "URL to access the web UI"
-  value = "http://${aws_instance.llama.public_ip}:7860"
+  value = {
+    web_ui    = "http://${aws_instance.llama.public_ip}:7860"
+  }
 }
